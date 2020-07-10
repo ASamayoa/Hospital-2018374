@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="547.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.andressamayoa.controller.MedicoEspecialidadController">
+   <children>
+      <Label layoutX="153.0" layoutY="14.0" prefHeight="49.0" prefWidth="242.0" text="Medico Especialidad">
+         <font>
+            <Font name="Bookman Old Style Bold" size="22.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cbmMedicos" disable="true" layoutX="78.0" layoutY="64.0" prefWidth="150.0" promptText="Medico" />
+      <ComboBox fx:id="cbmHorarios" disable="true" layoutX="300.0" layoutY="64.0" prefWidth="150.0" promptText="Horario" />
+      <ComboBox fx:id="cbmEspecialidades" disable="true" layoutX="199.0" layoutY="101.0" prefWidth="150.0" promptText="Especialidad" />
+      <TableView fx:id="tbnMedicosEspecialidades" layoutX="7.0" layoutY="140.0" prefHeight="184.0" prefWidth="533.0">
+        <columns>
+          <TableColumn fx:id="colCodigo" prefWidth="128.0" text="Codigo" />
+          <TableColumn fx:id="colMedico" prefWidth="134.0" text="Medico" />
+            <TableColumn fx:id="colHorario" prefWidth="136.0" text="Horario" />
+            <TableColumn fx:id="colEspecialidad" prefWidth="134.0" text="Especialidad" />
+        </columns>
+      </TableView>
+      <Button layoutX="26.0" layoutY="26.0" mnemonicParsing="false" onAction="#llamarMenuPrincipal" text="Volver" />
+      <Button fx:id="btnNuevo" layoutX="94.0" layoutY="347.0" mnemonicParsing="false" onAction="#nuevo" text="Agregar" />
+      <Button fx:id="btnEliminar" layoutX="395.0" layoutY="347.0" mnemonicParsing="false" onAction="#eliminar" text="Eliminar" />
+   </children>
+</AnchorPane>

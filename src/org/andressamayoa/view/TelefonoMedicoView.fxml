@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.andressamayoa.controller.TelefonoMedicoController">
+   <children>
+      <Label layoutX="198.0" layoutY="14.0" prefHeight="49.0" prefWidth="204.0" text="Telefono Medicos">
+         <font>
+            <Font name="Bookman Old Style Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="56.0" layoutY="67.0" text="Telefono Personal" />
+      <TableView fx:id="tbnTelefonosMedicos" layoutX="22.0" layoutY="166.0" onKeyReleased="#seleccionarElementos" onMouseClicked="#seleccionarElementos" prefHeight="171.0" prefWidth="557.0">
+        <columns>
+            <TableColumn fx:id="colCodigoTelefonoMedico" prefWidth="66.0" text="Codigo" />
+          <TableColumn fx:id="colMedico" prefWidth="110.0" text="Medico" />
+          <TableColumn fx:id="colTelefonoPersonal" prefWidth="199.0" text="Telefono Personal" />
+            <TableColumn fx:id="colTelefonoProfecional" prefWidth="181.0" text="Telefono Profecional" />
+        </columns>
+      </TableView>
+      <TextField fx:id="txtTelefonoPersonal" editable="false" layoutX="198.0" layoutY="63.0" onKeyTyped="#validarNumeroPersonal" prefHeight="25.0" prefWidth="377.0" />
+      <TextField fx:id="txtTelefonoProfecional" editable="false" layoutX="198.0" layoutY="96.0" onKeyTyped="#validarNumeroProfecional" prefHeight="25.0" prefWidth="377.0" />
+      <Label layoutX="49.0" layoutY="100.0" text="Telefono Profecional" />
+      <ComboBox fx:id="cbmCodigoMedico" disable="true" layoutX="29.0" layoutY="135.0" prefWidth="150.0" promptText="Medico" />
+      <Button fx:id="btnNuevo" layoutX="74.0" layoutY="347.0" mnemonicParsing="false" onAction="#nuevo" text="Agregar" />
+      <Button fx:id="btnEliminar" layoutX="221.0" layoutY="347.0" mnemonicParsing="false" onAction="#eliminar" text="Eliminar" />
+      <Button fx:id="btnEditar" layoutX="363.0" layoutY="347.0" mnemonicParsing="false" onAction="#editar" text="Editar" />
+      <Button fx:id="btnReporte" layoutX="480.0" layoutY="347.0" mnemonicParsing="false" onAction="#reporte" text="Reporte" />
+      <Button layoutX="56.0" layoutY="26.0" mnemonicParsing="false" onAction="#llamarMedicos" text="Volver" />
+   </children>
+</AnchorPane>

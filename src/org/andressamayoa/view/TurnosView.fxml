@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.andressamayoa.controller.TurnosController">
+   <children>
+      <Label layoutX="265.0" layoutY="14.0" text="Turno">
+         <font>
+            <Font name="Bookman Old Style Bold Italic" size="22.0" />
+         </font>
+      </Label>
+      <Button layoutX="58.0" layoutY="15.0" mnemonicParsing="false" onAction="#llamarMenuPrincipal" text="Volver" />
+      <TextField fx:id="txtPrecio" editable="false" layoutX="465.0" layoutY="78.0" onKeyTyped="#validarNumeros1" prefHeight="25.0" prefWidth="83.0" />
+      <Label layoutX="429.0" layoutY="80.0" text="Precio " />
+      <GridPane fx:id="grpFechaTurno" layoutX="125.0" layoutY="73.0" prefHeight="30.0" prefWidth="89.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+      </GridPane>
+      <GridPane fx:id="grpFechaCita" layoutX="328.0" layoutY="75.0" prefHeight="30.0" prefWidth="89.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+      <Label layoutX="25.0" layoutY="79.0" text="Fecha  de turno" />
+      <Label layoutX="239.0" layoutY="79.0" text="Fecha  de cita" />
+      <ComboBox fx:id="cbmResponsableTurno" disable="true" layoutX="237.0" layoutY="114.0" prefWidth="150.0" promptText="ResponsableTurno" />
+      <ComboBox fx:id="cbmMedicoEspecialidad" disable="true" layoutX="436.0" layoutY="114.0" prefWidth="150.0" promptText="Medico Especialidad" />
+      <ComboBox fx:id="cbmPacientes" disable="true" layoutX="33.0" layoutY="114.0" prefWidth="150.0" promptText="Paciente" />
+      <TableView fx:id="tbnTurnos" layoutX="21.0" layoutY="157.0" onKeyReleased="#seleccionar" onMouseClicked="#seleccionar" prefHeight="161.0" prefWidth="566.0">
+        <columns>
+          <TableColumn fx:id="colCodigo" prefWidth="47.0" text="Codigo" />
+          <TableColumn fx:id="colFechaTurno" prefWidth="93.0" text="Fecha de turno" />
+            <TableColumn fx:id="colFechaCita" prefWidth="83.0" text="Fecha de cita" />
+            <TableColumn fx:id="colPrecio" prefWidth="56.0" text="Precio" />
+            <TableColumn fx:id="colPaciente" prefWidth="52.0" text="Paciente" />
+            <TableColumn fx:id="colResponsableTurno" prefWidth="111.0" text="Responsable turno" />
+            <TableColumn fx:id="colMedicoEspecialidad" prefWidth="128.0" text="Medico especialidad" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnNuevo" layoutX="54.0" layoutY="346.0" mnemonicParsing="false" onAction="#nuevo" text="Agregar" />
+      <Button fx:id="btnEliminar" layoutX="185.0" layoutY="346.0" mnemonicParsing="false" onAction="#eliminar" text="Eliminar" />
+      <Button fx:id="btnEditar" layoutX="364.0" layoutY="346.0" mnemonicParsing="false" onAction="#editar" text="Editar" />
+      <Button fx:id="btnReporte" layoutX="484.0" layoutY="346.0" mnemonicParsing="false" onAction="#reporte" text="Reporte" />
+   </children>
+</AnchorPane>

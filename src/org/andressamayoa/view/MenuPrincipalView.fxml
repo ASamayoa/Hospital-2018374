@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="360.0" prefWidth="460.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.andressamayoa.controller.MenuPrincipalController">
+   <children>
+      <ImageView fitHeight="360.0" fitWidth="460.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/MenuPrincipal.jpg" />
+         </image></ImageView>
+      <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="207.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="253.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Modulos">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#llamarPacientes" text="Pacientes" />
+                  <MenuItem mnemonicParsing="false" onAction="#llamarMedico" text="Medicos" />
+                  <MenuItem mnemonicParsing="false" onAction="#llamarEspecialidades" text="Especialidades" />
+                  <MenuItem mnemonicParsing="false" onAction="#llamarAreas" text="Areas" />
+                  <MenuItem mnemonicParsing="false" onAction="#llamarCargos" text="Cargos" />
+                  <MenuItem mnemonicParsing="false" onAction="#llamarHorarios" text="Horarios" />
+                  <MenuItem mnemonicParsing="false" onAction="#llamarResponsableTurno" text="Responsable Turno" />
+                  <MenuItem mnemonicParsing="false" onAction="#llamarMedicoEspecialidad" text="Medico Especialidad" />
+                  <MenuItem mnemonicParsing="false" onAction="#llamarTurno" text="Turnos" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Reportes">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Reporte de Citas" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Ayuda">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#llamarAcercaDe" text="Acerca de" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <ImageView fitHeight="103.0" fitWidth="127.0" layoutX="333.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true" />
+   </children>
+</AnchorPane>

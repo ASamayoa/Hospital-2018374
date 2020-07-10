@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.andressamayoa.controller.CargosController">
+   <children>
+      <Label layoutX="262.0" layoutY="14.0" text="Cargos">
+         <font>
+            <Font name="Bookman Old Style Bold Italic" size="21.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tbnCargos" layoutX="39.0" layoutY="111.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="187.0" prefWidth="523.0">
+        <columns>
+          <TableColumn fx:id="colCodigo" prefWidth="134.0" text="Codigo" />
+            <TableColumn fx:id="colNombre" prefWidth="388.0" text="Nombre" />
+        </columns>
+      </TableView>
+      <TextField fx:id="txtNombre" editable="false" layoutX="132.0" layoutY="70.0" onKeyTyped="#validarLetras" prefHeight="25.0" prefWidth="428.0" />
+      <Label layoutX="72.0" layoutY="74.0" text="Nombre" />
+      <Button layoutX="69.0" layoutY="14.0" mnemonicParsing="false" onAction="#llamarMenuPrincipal" text="Volver" />
+      <Button fx:id="btnNuevo" layoutX="40.0" layoutY="314.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="66.0" prefWidth="99.0" text="Agregar" />
+      <Button fx:id="btnEliminar" layoutX="187.0" layoutY="315.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="66.0" prefWidth="99.0" text="Eliminar" />
+      <Button fx:id="btnEditar" layoutX="323.0" layoutY="315.0" mnemonicParsing="false" onAction="#editar" prefHeight="66.0" prefWidth="99.0" text="Editar" />
+      <Button fx:id="btnReporte" layoutX="463.0" layoutY="314.0" mnemonicParsing="false" onAction="#reporte" prefHeight="66.0" prefWidth="99.0" text="Reporte" />
+   </children>
+</AnchorPane>

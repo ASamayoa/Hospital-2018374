@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.andressamayoa.controller.AcercaDeController">
+   <children>
+      <Label layoutX="105.0" layoutY="208.0" prefHeight="17.0" prefWidth="140.0" text="Andrés Samayoa Penagos" />
+      <Label layoutX="100.0" layoutY="263.0" text="Centro Tecnico Laboral Kinal" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="127.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/AcercaDe.jpeg" />
+         </image></ImageView>
+      <Label layoutX="125.0" layoutY="239.0" text="5º Perito Seccion A" />
+      <Label layoutX="88.0" layoutY="290.0" text="Andres_SamayoaP@outlook.com" />
+      <Button layoutX="7.0" layoutY="6.0" mnemonicParsing="false" onAction="#llamarMenuPrincipal" text="Volver al Menu" />
+   </children>
+</AnchorPane>

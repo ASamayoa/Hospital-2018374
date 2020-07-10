@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.andressamayoa.controller.ContactoUrgenciasController">
+   <children>
+      <Label layoutX="197.0" layoutY="14.0" text="Contacto Urgencias">
+         <font>
+            <Font name="Bookman Old Style Bold Italic" size="20.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tbnContactosUrgencias" layoutX="45.0" layoutY="180.0" onKeyReleased="#seleccionar" onMouseClicked="#seleccionar" prefHeight="152.0" prefWidth="520.0">
+        <columns>
+            <TableColumn fx:id="colCodigo" minWidth="0.0" prefWidth="51.0" text="Codigo" />
+          <TableColumn fx:id="colNombres" prefWidth="121.0" text="Nombres" />
+          <TableColumn fx:id="colApellidos" minWidth="0.0" prefWidth="134.0" text="Apellidos" />
+            <TableColumn fx:id="colNumero" minWidth="0.0" prefWidth="117.0" text="Numero Telefonico" />
+            <TableColumn fx:id="colPaciente" minWidth="0.0" prefWidth="96.0" text="Paciente" />
+        </columns>
+      </TableView>
+      <TextField fx:id="txtNombres" editable="false" layoutX="145.0" layoutY="54.0" onKeyTyped="#validarLetras" prefHeight="25.0" prefWidth="415.0" />
+      <Label layoutX="81.0" layoutY="58.0" text="Nombres" />
+      <TextField fx:id="txtApellidos" editable="false" layoutX="145.0" layoutY="85.0" onKeyTyped="#validarLetras" prefHeight="25.0" prefWidth="415.0" />
+      <TextField fx:id="txtNumero" editable="false" layoutX="162.0" layoutY="116.0" onKeyTyped="#validarNumeros" prefHeight="25.0" prefWidth="398.0" />
+      <Label layoutX="81.0" layoutY="89.0" text="Apellidos" />
+      <Label layoutX="55.0" layoutY="120.0" text="Numero Telefonico" />
+      <ComboBox fx:id="cbmCodigoPaciente" layoutX="55.0" layoutY="148.0" prefWidth="150.0" promptText="Paciente" />
+      <Button fx:id="btnNuevo" layoutX="44.0" layoutY="342.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="50.0" prefWidth="75.0" text="Agregar" />
+      <Button fx:id="btnEliminar" layoutX="197.0" layoutY="342.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="50.0" prefWidth="75.0" text="Eliminar" />
+      <Button fx:id="btnEditar" layoutX="329.0" layoutY="342.0" mnemonicParsing="false" onAction="#editar" prefHeight="50.0" prefWidth="75.0" text="Editar" />
+      <Button fx:id="btnReporte" layoutX="490.0" layoutY="342.0" mnemonicParsing="false" onAction="#reporte" prefHeight="50.0" prefWidth="75.0" text="Reporte" />
+      <Button layoutX="29.0" layoutY="14.0" mnemonicParsing="false" onAction="#llamarPacientes" prefHeight="25.0" prefWidth="75.0" text="Volver" />
+   </children>
+</AnchorPane>

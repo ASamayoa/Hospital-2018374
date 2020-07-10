@@ -1,0 +1,1 @@
+jdbc:mysql://localhost:3606/DBHospitalInfectologia2018374?characterEncoding=latin1&useConfigs=maxPerformance

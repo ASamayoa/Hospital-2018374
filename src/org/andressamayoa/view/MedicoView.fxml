@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.andressamayoa.controller.MedicoController">
+   <children>
+      <Label layoutX="354.0" layoutY="42.0" text="Medicos">
+         <font>
+            <Font name="Bookman Old Style Bold Italic" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="28.0" layoutY="111.0" text="Licencia Medica" />
+      <Label layoutX="46.0" layoutY="148.0" text="Nombres" />
+      <TextField fx:id="txtLicenciaMedica" editable="false" layoutX="119.0" layoutY="107.0" onKeyTyped="#validarNumeros" prefHeight="25.0" prefWidth="654.0" />
+      <TextField fx:id="txtNombres" editable="false" layoutX="119.0" layoutY="144.0" onKeyTyped="#validarLetras" prefHeight="25.0" prefWidth="654.0" />
+      <Label layoutX="45.0" layoutY="184.0" text="Apellidos" />
+      <TextField fx:id="txtApellidos" editable="false" layoutX="119.0" layoutY="180.0" onKeyTyped="#validarLetras" prefHeight="25.0" prefWidth="654.0" />
+      <Label layoutX="26.0" layoutY="218.0" text="Hora de Entrada" />
+      <TextField fx:id="txtHoraEntrada" editable="false" layoutX="122.0" layoutY="214.0" prefHeight="25.0" prefWidth="138.0" />
+      <Label layoutX="294.0" layoutY="218.0" text="Hora de Salida" />
+      <TextField fx:id="txtHoraSalida" editable="false" layoutX="386.0" layoutY="214.0" prefHeight="25.0" prefWidth="138.0" />
+      <Label layoutX="548.0" layoutY="218.0" text="Turno Maximo" />
+      <TextField fx:id="txtTurno" editable="false" layoutX="638.0" layoutY="214.0" prefHeight="25.0" prefWidth="138.0" />
+      <Label layoutX="151.0" layoutY="257.0" text="Sexo" />
+      <TextField fx:id="txtSexo" editable="false" layoutX="212.0" layoutY="253.0" onKeyTyped="#validarLetras" prefHeight="25.0" prefWidth="375.0" />
+      <TableView fx:id="tbnMedicos" layoutX="13.0" layoutY="309.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="225.0" prefWidth="773.0">
+        <columns>
+            <TableColumn fx:id="colCodigo" prefWidth="54.0" text="Codigo" />
+          <TableColumn fx:id="colLicenciaMedica" prefWidth="96.0" text="Licencia Medica" />
+          <TableColumn fx:id="colNombres" prefWidth="135.0" text="Nombres" />
+            <TableColumn fx:id="colApellidos" prefWidth="159.0" text="Apellidos" />
+            <TableColumn fx:id="colEntrada" prefWidth="81.0" text="Entrada" />
+            <TableColumn fx:id="colSalida" prefWidth="74.0" text="Salida" />
+            <TableColumn fx:id="colTurno" prefWidth="92.0" text="Turno Maximo" />
+            <TableColumn fx:id="colSexo" prefWidth="81.0" text="Sexo" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnNuevo" layoutX="70.0" layoutY="537.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="45.0" prefWidth="71.0" text="Nuevo" />
+      <Button fx:id="btnEliminar" layoutX="225.0" layoutY="537.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="45.0" prefWidth="71.0" text="Eliminar" />
+      <Button fx:id="btnEditar" layoutX="499.0" layoutY="537.0" mnemonicParsing="false" onAction="#editar" prefHeight="45.0" prefWidth="71.0" text="Editar" />
+      <Button fx:id="btnReporte" layoutX="638.0" layoutY="537.0" mnemonicParsing="false" onAction="#reporte" prefHeight="45.0" prefWidth="71.0" text="Reporte" />
+      <Button layoutX="65.0" layoutY="43.0" mnemonicParsing="false" onAction="#llamarMenuPrincipal" text="Vorver al menu" />
+      <Button layoutX="610.0" layoutY="43.0" mnemonicParsing="false" onAction="#llamarTelefonoMedico" text="Telefono de Medicos" />
+      <ImageView fitHeight="53.0" fitWidth="49.0" layoutX="362.0" layoutY="535.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/medicos.png" />
+         </image>
+      </ImageView>
+   </children>
+   <effect>
+      <InnerShadow />
+   </effect>
+</AnchorPane>

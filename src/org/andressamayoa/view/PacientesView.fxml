@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.andressamayoa.controller.PacientesController">
+   <children>
+      <Label layoutX="342.0" layoutY="14.0" text="Pacientes">
+         <font>
+            <Font name="Bookman Old Style Bold Italic" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="556.0" layoutY="193.0" text="DPI" />
+      <TableView fx:id="tbnPacientes" layoutX="14.0" layoutY="231.0" onKeyReleased="#seleccionarDatos" onMouseClicked="#seleccionarDatos" prefHeight="276.0" prefWidth="778.0">
+        <columns>
+            <TableColumn fx:id="colCodigo" prefWidth="51.0" text="Codigo" />
+          <TableColumn fx:id="colDpi" prefWidth="74.0" text="DPi" />
+          <TableColumn fx:id="colNombres" prefWidth="103.0" text="Nombres" />
+            <TableColumn fx:id="colApellidos" prefWidth="114.0" text="Apellidos" />
+            <TableColumn fx:id="colDireccion" prefWidth="119.0" text="Direccion" />
+            <TableColumn fx:id="colOcupacion" prefWidth="85.0" text="Ocupacion" />
+            <TableColumn fx:id="colFechaDeNacimiento" prefWidth="124.0" text="Fecha de Nacimiento" />
+            <TableColumn fx:id="colEdad" prefWidth="33.0" text="Edad" />
+            <TableColumn fx:id="colSexo" prefWidth="74.0" text="Sexo" />
+        </columns>
+      </TableView>
+      <TextField fx:id="txtNombre" editable="false" layoutX="126.0" layoutY="60.0" onKeyTyped="#validarLetras" prefHeight="25.0" prefWidth="640.0" />
+      <Label layoutX="66.0" layoutY="64.0" text="Nombres" />
+      <Label layoutX="66.0" layoutY="97.0" text="Apellidos" />
+      <Label layoutX="35.0" layoutY="159.0" text="Fecha de Nacimiento" />
+      <Label layoutX="66.0" layoutY="129.0" text="Direccion" />
+      <Label layoutX="38.0" layoutY="192.0" text="Ocupacion" />
+      <Label layoutX="321.0" layoutY="193.0" text="Sexo" />
+      <TextField fx:id="txtApellido" editable="false" layoutX="126.0" layoutY="93.0" onKeyTyped="#validarLetras" prefHeight="25.0" prefWidth="640.0" />
+      <TextField fx:id="txtDireccion" editable="false" layoutX="126.0" layoutY="125.0" prefHeight="25.0" prefWidth="640.0" />
+      <TextField fx:id="txtOcupacion" editable="false" layoutX="115.0" layoutY="188.0" onKeyTyped="#validarLetras" prefHeight="25.0" prefWidth="180.0" />
+      <TextField fx:id="txtSexo" editable="false" layoutX="356.0" layoutY="189.0" onKeyTyped="#validarLetras" prefHeight="25.0" prefWidth="180.0" />
+      <TextField fx:id="txtDpi" editable="false" layoutX="586.0" layoutY="189.0" onKeyTyped="#validarNumeros" prefHeight="25.0" prefWidth="180.0" />
+      <Button fx:id="btnNuevo" layoutX="68.0" layoutY="525.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="65.0" prefWidth="94.0" text="Agregar" />
+      <Button fx:id="btnEliminar" layoutX="248.0" layoutY="525.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="65.0" prefWidth="94.0" text="Eliminar" />
+      <Button fx:id="btnEditar" layoutX="464.0" layoutY="525.0" mnemonicParsing="false" onAction="#editar" prefHeight="65.0" prefWidth="94.0" text="Editar" />
+      <Button fx:id="btnReporte" layoutX="629.0" layoutY="525.0" mnemonicParsing="false" onAction="#reporte" prefHeight="65.0" prefWidth="94.0" text="Reporte" />
+      <Button layoutX="65.0" layoutY="15.0" mnemonicParsing="false" onAction="#llamarMenuPrincipal" text="Volver" />
+      <Button layoutX="608.0" layoutY="15.0" mnemonicParsing="false" onAction="#llamarContactoUrgencias" text="Contacto de Urgencias" />
+      <GridPane fx:id="grpFecha" layoutX="162.0" layoutY="153.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+      </GridPane>
+   </children>
+</AnchorPane>

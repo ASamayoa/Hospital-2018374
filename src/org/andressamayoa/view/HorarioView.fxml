@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.andressamayoa.controller.HorariosController">
+   <children>
+      <Label layoutX="249.0" layoutY="14.0" text="Horarios">
+         <font>
+            <Font name="Bookman Old Style Bold Italic" size="22.0" />
+         </font>
+      </Label>
+      <Button layoutX="33.0" layoutY="15.0" mnemonicParsing="false" onAction="#llamarMenuPrincipal" text="Volver" />
+      <Button fx:id="btnNuevo" layoutX="33.0" layoutY="333.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="45.0" prefWidth="71.0" text="Nuevo" />
+      <Button fx:id="btnEliminar" layoutX="178.0" layoutY="333.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="45.0" prefWidth="71.0" text="Eliminar" />
+      <Button fx:id="btnEditar" layoutX="351.0" layoutY="333.0" mnemonicParsing="false" onAction="#editar" prefHeight="45.0" prefWidth="71.0" text="Editar" />
+      <Button fx:id="btnReporte" layoutX="491.0" layoutY="333.0" mnemonicParsing="false" onAction="#reporte" prefHeight="45.0" prefWidth="71.0" text="Reporte" />
+      <TableView fx:id="tbnHorarios" layoutX="13.0" layoutY="157.0" onKeyReleased="#seleccionar" onMouseClicked="#seleccionar" prefHeight="161.0" prefWidth="573.0">
+        <columns>
+          <TableColumn fx:id="colCodigo" prefWidth="49.0" text="Codigo" />
+          <TableColumn fx:id="colEntrada" prefWidth="116.0" text="Hora Entrada" />
+            <TableColumn fx:id="colSalida" prefWidth="116.0" text="Hora Salida" />
+            <TableColumn fx:id="colLunes" prefWidth="49.0" text="Lunes" />
+            <TableColumn fx:id="colMartes" prefWidth="54.0" text="Martes" />
+            <TableColumn fx:id="colMiercoles" prefWidth="69.0" text="Miercoles" />
+            <TableColumn fx:id="colJueves" prefWidth="53.0" text="Jueves" />
+            <TableColumn fx:id="colViernes" prefWidth="66.0" text="Viernes" />
+        </columns>
+      </TableView>
+      <CheckBox fx:id="lunes" disable="true" layoutX="104.0" layoutY="129.0" mnemonicParsing="false" text="Lunes" />
+      <CheckBox fx:id="martes" disable="true" layoutX="167.0" layoutY="129.0" mnemonicParsing="false" text="Martes" />
+      <CheckBox fx:id="viernes" disable="true" layoutX="371.0" layoutY="129.0" mnemonicParsing="false" text="Viernes" />
+      <CheckBox fx:id="jueves" disable="true" layoutX="308.0" layoutY="129.0" mnemonicParsing="false" text="Jueves" />
+      <CheckBox fx:id="miercoles" disable="true" layoutX="228.0" layoutY="129.0" mnemonicParsing="false" text="Miercoles" />
+      <TextField fx:id="txtEntrada" editable="false" layoutX="139.0" layoutY="49.0" prefHeight="25.0" prefWidth="446.0" />
+      <TextField fx:id="txtSalida" editable="false" layoutX="139.0" layoutY="87.0" prefHeight="25.0" prefWidth="446.0" />
+      <Label layoutX="55.0" layoutY="53.0" text="Hora Entrada" />
+      <Label layoutX="55.0" layoutY="91.0" text="Hora Salida" />
+   </children>
+</AnchorPane>

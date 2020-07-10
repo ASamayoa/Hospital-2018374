@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.andressamayoa.controller.ResponsableTurnoController">
+   <children>
+      <Label layoutX="172.0" layoutY="14.0" text="Responsable de Turno">
+         <font>
+            <Font name="Bookman Old Style Bold Italic" size="22.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtNombres" editable="false" layoutX="124.0" layoutY="55.0" onKeyTyped="#validarLetras" prefHeight="25.0" prefWidth="444.0" />
+      <TextField fx:id="txtTelefono" editable="false" layoutX="124.0" layoutY="91.0" onKeyTyped="#validarNumeros" prefHeight="25.0" prefWidth="444.0" />
+      <ComboBox fx:id="cbmAreas" disable="true" layoutX="72.0" layoutY="127.0" prefWidth="150.0" promptText="Area" />
+      <ComboBox fx:id="cbmCargos" disable="true" layoutX="364.0" layoutY="127.0" prefWidth="150.0" promptText="Cargo" />
+      <Label layoutX="72.0" layoutY="59.0" text="Nombre" />
+      <Label layoutX="72.0" layoutY="95.0" text="Telefono" />
+      <TableView fx:id="tbnResponsablesTurnos" layoutX="26.0" layoutY="160.0" onKeyReleased="#seleccionar" onMouseClicked="#seleccionar" prefHeight="165.0" prefWidth="543.0">
+        <columns>
+          <TableColumn fx:id="colCodigo" prefWidth="75.0" text="Codigo" />
+          <TableColumn fx:id="colNombre" prefWidth="133.0" text="Nombre" />
+            <TableColumn fx:id="colTelefono" prefWidth="176.0" text="Telefono" />
+            <TableColumn fx:id="colArea" prefWidth="78.0" text="Area" />
+            <TableColumn fx:id="colCargo" text="Cargo" />
+        </columns>
+      </TableView>
+      <Button layoutX="26.0" layoutY="15.0" mnemonicParsing="false" onAction="#llamarMenuPrincipal" text="Volver" />
+      <Button fx:id="btnNuevo" layoutX="37.0" layoutY="341.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="45.0" prefWidth="71.0" text="Nuevo" />
+      <Button fx:id="btnEliminar" layoutX="187.0" layoutY="341.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="45.0" prefWidth="71.0" text="Eliminar" />
+      <Button fx:id="btnEditar" layoutX="368.0" layoutY="341.0" mnemonicParsing="false" onAction="#editar" prefHeight="45.0" prefWidth="71.0" text="Editar" />
+      <Button fx:id="btnReporte" layoutX="498.0" layoutY="341.0" mnemonicParsing="false" onAction="#reporte" prefHeight="45.0" prefWidth="71.0" text="Reporte" />
+   </children>
+</AnchorPane>
